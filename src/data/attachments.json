@@ -1,0 +1,100 @@
+{
+  "scopes": [
+    {
+      "id": 1,
+      "name": "Red Dot Sight",
+      "zoom": 1,
+      "accuracyBonus": 5,
+      "recoilControl": 2,
+      "weight": 1,
+      "image": "https://pubg.wiki.gg/images/Red_Dot_Sight.png",
+      "prices": [
+        { "name": "Red Dot Sight Airsoft / Tactical", "priceUSD": 49.90 }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Holographic Sight",
+      "zoom": 1,
+      "accuracyBonus": 6,
+      "recoilControl": 2,
+      "weight": 1,
+      "image": "https://pubg.wiki.gg/images/Holographic_Sight.png",
+      "prices": [
+        { "name": "Holographic Sight Replica", "priceUSD": 79.90 }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "2x Scope",
+      "zoom": 2,
+      "accuracyBonus": 10,
+      "recoilControl": 3,
+      "weight": 2,
+      "image": "https://pubg.wiki.gg/images/2x_Scope.png",
+      "prices": [
+        { "name": "2x Tactical Scope Airsoft", "priceUSD": 69.90 }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "3x Scope",
+      "zoom": 3,
+      "accuracyBonus": 14,
+      "recoilControl": 4,
+      "weight": 2,
+      "image": "https://pubg.wiki.gg/images/3x_Scope.png",
+      "prices": [
+        { "name": "3x Magnification Scope Replica", "priceUSD": 89.90 }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "4x Scope",
+      "zoom": 4,
+      "accuracyBonus": 18,
+      "recoilControl": 5,
+      "weight": 3,
+      "image": "https://pubg.wiki.gg/images/4x_Scope.png",
+      "prices": [
+        { "name": "4x Tactical Scope Airsoft", "priceUSD": 109.90 }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "6x Scope",
+      "zoom": 6,
+      "accuracyBonus": 24,
+      "recoilControl": 6,
+      "weight": 3,
+      "image": "https://pubg.wiki.gg/images/6x_Scope.png",
+      "prices": [
+        { "name": "6x Magnification Scope Replica", "priceUSD": 129.90 }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "8x Scope",
+      "zoom": 8,
+      "accuracyBonus": 30,
+      "recoilControl": 7,
+      "weight": 4,
+      "image": "https://pubg.wiki.gg/images/8x_Scope.png",
+      "prices": [
+        { "name": "8x Tactical Scope Airsoft", "priceUSD": 149.90 }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "15x Scope",
+      "zoom": 15,
+      "accuracyBonus": 40,
+      "recoilControl": 10,
+      "weight": 5,
+      "image": "https://pubg.wiki.gg/images/15x_Scope.png",
+      "prices": [
+        { "name": "15x Sniper Scope Replica", "priceUSD": 249.90 }
+      ]
+    }
+  ]
+}

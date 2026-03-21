@@ -1,0 +1,164 @@
+'use client';
+import React from "react";
+import weaponsData from "@/data/weapons.json";
+import attachmentsData from "@/data/attachments.json";
+import gripsData from "@/data/grips.json";
+import muzzlesData from "@/data/muzzles.json";
+import magazinesData from "@/data/magazines.json";
+import stocksData from "@/data/stocks.json";
+
+export default function Prices() {
+  const renderPrice = (value?: number) => (
+    value !== undefined ? <p className="pubg-price mt-2">Цена: ${value}</p> : null
+  )
+
+  return (
+    <div className="min-h-screen">
+      <section className="pubg-section">
+        <div className="pubg-container">
+          <h2 className="pubg-title mb-8 text-2xl md:text-3xl">Оружие и цены</h2>
+          <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
+          {weaponsData.weapons.map((weapon) => (
+            <div
+              key={weapon.name}
+              className="pubg-card flex flex-col items-center p-4"
+            >
+              <img
+                src={weapon.image}
+                alt={weapon.name}
+                className="mb-4 h-24 w-24 object-contain"
+              />
+              <h3 className="pubg-title text-center text-base">{weapon.name}</h3>
+              <p className="text-sm text-[#cfcfcf]">Урон: {weapon.damage}</p>
+              <p className="text-sm text-[#a3a3a3]">Тип: {weapon.type}</p>
+              {renderPrice(weapon.prices[0]?.priceUSD)}
+            </div>
+          ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="pubg-section bg-[#171717]">
+        <div className="pubg-container">
+          <h2 className="pubg-title mb-8 text-2xl md:text-3xl">Прицелы</h2>
+          <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
+            {attachmentsData.scopes.map((scope) => (
+              <div
+                key={scope.id}
+                className="pubg-card flex flex-col items-center p-4"
+              >
+                <img
+                  src={scope.image}
+                  alt={scope.name}
+                  className="mb-4 h-24 w-24 object-contain"
+                />
+                <h3 className="pubg-title text-center text-base">{scope.name}</h3>
+                <p className="text-sm text-[#cfcfcf]">Zoom: {scope.zoom}x</p>
+                <p className="text-sm text-[#a3a3a3]">Accuracy: +{scope.accuracyBonus}</p>
+                {renderPrice(scope.prices[0]?.priceUSD)}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="pubg-section">
+        <div className="pubg-container">
+          <h2 className="pubg-title mb-8 text-2xl md:text-3xl">Рукоятки</h2>
+          <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
+            {gripsData.grips.map((grip) => (
+              <div
+                key={grip.id}
+                className="pubg-card flex flex-col items-center p-4"
+              >
+                <img
+                  src={grip.image}
+                  alt={grip.name}
+                  className="mb-4 h-24 w-24 object-contain"
+                />
+                <h3 className="pubg-title text-center text-base">{grip.name}</h3>
+                <p className="text-sm text-[#cfcfcf]">Вертикальная отдача: -{grip.recoilVertical}</p>
+                <p className="text-sm text-[#a3a3a3]">Горизонтальная отдача: -{grip.recoilHorizontal}</p>
+                {renderPrice(grip.prices[0]?.priceUSD)}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="pubg-section bg-[#171717]">
+        <div className="pubg-container">
+          <h2 className="pubg-title mb-8 text-2xl md:text-3xl">Дульные насадки</h2>
+          <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
+            {muzzlesData.muzzles.map((muzzle) => (
+              <div
+                key={muzzle.id}
+                className="pubg-card flex flex-col items-center p-4"
+              >
+                <img
+                  src={muzzle.image}
+                  alt={muzzle.name}
+                  className="mb-4 h-24 w-24 object-contain"
+                />
+                <h3 className="pubg-title text-center text-base">{muzzle.name}</h3>
+                <p className="text-sm text-[#cfcfcf]">Вертикальная отдача: -{muzzle.recoilVertical}</p>
+                <p className="text-sm text-[#a3a3a3]">Горизонтальная отдача: -{muzzle.recoilHorizontal}</p>
+                {muzzle.soundReduction > 0 && <p className="text-sm text-[#a3a3a3]">Снижение звука: {muzzle.soundReduction}</p>}
+                {renderPrice(muzzle.prices[0]?.priceUSD)}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="pubg-section">
+        <div className="pubg-container">
+          <h2 className="pubg-title mb-8 text-2xl md:text-3xl">Магазины</h2>
+          <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
+            {magazinesData.magazines.map((mag) => (
+              <div
+                key={mag.id}
+                className="pubg-card flex flex-col items-center p-4"
+              >
+                <img
+                  src={mag.image}
+                  alt={mag.name}
+                  className="mb-4 h-24 w-24 object-contain"
+                />
+                <h3 className="pubg-title text-center text-base">{mag.name}</h3>
+                <p className="text-sm text-[#cfcfcf]">Вместимость: +{mag.capacityBonus}</p>
+                <p className="text-sm text-[#a3a3a3]">Скорость перезарядки: +{mag.reloadSpeedBonus}</p>
+                {renderPrice(mag.prices[0]?.priceUSD)}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="pubg-section bg-[#171717]">
+        <div className="pubg-container">
+          <h2 className="pubg-title mb-8 text-2xl md:text-3xl">Приклады</h2>
+          <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
+            {stocksData.stocks.map((stock) => (
+              <div
+                key={stock.id}
+                className="pubg-card flex flex-col items-center p-4"
+              >
+                <img
+                  src={stock.image}
+                  alt={stock.name}
+                  className="mb-4 h-24 w-24 object-contain"
+                />
+                <h3 className="pubg-title text-center text-base">{stock.name}</h3>
+                <p className="text-sm text-[#cfcfcf]">Вертикальная отдача: -{stock.recoilVertical}</p>
+                <p className="text-sm text-[#a3a3a3]">Горизонтальная отдача: -{stock.recoilHorizontal}</p>
+                <p className="text-sm text-[#a3a3a3]">ADS Speed: {stock.adsSpeed}</p>
+                {renderPrice(stock.prices[0]?.priceUSD)}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}

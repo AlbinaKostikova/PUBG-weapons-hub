@@ -1,0 +1,79 @@
+{
+  "grips": [
+    {
+      "id": 1,
+      "name": "Vertical Foregrip",
+      "recoilVertical": 15,
+      "recoilHorizontal": 5,
+      "stability": 10,
+      "adsSpeed": -2,
+      "image": "https://pubg.wiki.gg/images/Vertical_Foregrip.png",
+      "prices": [
+        { "name": "PTS EPF2‑S Vertical Foregrip", "priceUSD": 24.90 },
+        { "name": "Generic Tactical Vertical Grip", "priceUSD": 12.99 }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Angled Foregrip",
+      "recoilVertical": 5,
+      "recoilHorizontal": 5,
+      "stability": 8,
+      "adsSpeed": 10,
+      "image": "https://pubg.wiki.gg/images/Angled_Foregrip.png",
+      "prices": [
+        { "name": "MP AFG‑2 Angled Foregrip", "priceUSD": 7.90 },
+        { "name": "Magpul M‑LOK AFG", "priceUSD": 32.90 },
+        { "name": "Leapers Ultra Slim Angled Foregrip", "priceUSD": 47.90 }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Half Grip",
+      "recoilVertical": 12,
+      "recoilHorizontal": 12,
+      "stability": 12,
+      "adsSpeed": -5,
+      "image": "https://pubg.wiki.gg/images/Half_Grip.png",
+      "prices": [
+        { "name": "Ergonomic Pointing Foregrip", "priceUSD": 17.90 }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Thumb Grip",
+      "recoilVertical": 5,
+      "recoilHorizontal": 3,
+      "stability": 6,
+      "adsSpeed": 15,
+      "image": "https://pubg.wiki.gg/images/Thumb_Grip.png",
+      "prices": [
+        { "name": "FMA Foldable Grip", "priceUSD": 21.90 }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Lightweight Grip",
+      "recoilVertical": 3,
+      "recoilHorizontal": 3,
+      "stability": 5,
+      "adsSpeed": 5,
+      "image": "https://pubg.wiki.gg/images/Lightweight_Grip.png",
+      "prices": [
+        { "name": "Lightweight Tactical Grip", "priceUSD": 14.90 }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Laser Sight",
+      "recoilVertical": 0,
+      "recoilHorizontal": 0,
+      "stability": 3,
+      "adsSpeed": 8,
+      "image": "https://pubg.wiki.gg/images/Laser_Sight.png",
+      "prices": [
+        { "name": "Airsoft Laser Sight", "priceUSD": 19.90 }
+      ]
+    }
+  ]
+}

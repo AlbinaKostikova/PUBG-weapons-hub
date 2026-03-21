@@ -1,0 +1,82 @@
+{
+  "magazines": [
+    {
+      "id": 1,
+      "name": "Extended Magazine AR/DMR",
+      "type": "extended",
+      "capacityBonus": 15,
+      "reloadSpeedBonus": -5,
+      "weight": 2,
+      "image": "https://pubg.wiki.gg/images/Extended_Mag_AR_DMR.png",
+      "prices": [
+        { "name": "PTS Extended Magazine AR/DMR", "priceUSD": 12.90 },
+        { "name": "Airsoft Extended AR Magazine", "priceUSD": 9.90 }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Extended Magazine SMG",
+      "type": "extended",
+      "capacityBonus": 10,
+      "reloadSpeedBonus": -3,
+      "weight": 1,
+      "image": "https://pubg.wiki.gg/images/Extended_Mag_SMG.png",
+      "prices": [
+        { "name": "SMG Airsoft Extended Magazine", "priceUSD": 8.90 },
+        { "name": "PTS SMG Extended Magazine", "priceUSD": 11.50 }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Extended Magazine Pistol",
+      "type": "extended",
+      "capacityBonus": 7,
+      "reloadSpeedBonus": -2,
+      "weight": 1,
+      "image": "https://pubg.wiki.gg/images/Extended_Mag_Pistol.png",
+      "prices": [
+        { "name": "Airsoft Pistol Extended Magazine", "priceUSD": 6.90 },
+        { "name": "PTS Pistol Extended Magazine", "priceUSD": 7.50 }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Quickdraw Magazine AR/DMR",
+      "type": "quickdraw",
+      "capacityBonus": 0,
+      "reloadSpeedBonus": 15,
+      "weight": 2,
+      "image": "https://pubg.wiki.gg/images/Quickdraw_Mag_AR_DMR.png",
+      "prices": [
+        { "name": "Quickdraw AR Magazine Airsoft", "priceUSD": 13.90 },
+        { "name": "PTS Quickdraw Magazine AR/DMR", "priceUSD": 14.50 }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Quickdraw Magazine SMG",
+      "type": "quickdraw",
+      "capacityBonus": 0,
+      "reloadSpeedBonus": 15,
+      "weight": 1,
+      "image": "https://pubg.wiki.gg/images/Quickdraw_Mag_SMG.png",
+      "prices": [
+        { "name": "Quickdraw SMG Magazine Airsoft", "priceUSD": 12.90 },
+        { "name": "PTS Quickdraw SMG Magazine", "priceUSD": 13.50 }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Quickdraw Magazine Pistol",
+      "type": "quickdraw",
+      "capacityBonus": 0,
+      "reloadSpeedBonus": 15,
+      "weight": 1,
+      "image": "https://pubg.wiki.gg/images/Quickdraw_Mag_Pistol.png",
+      "prices": [
+        { "name": "Quickdraw Pistol Magazine Airsoft", "priceUSD": 7.90 },
+        { "name": "PTS Quickdraw Pistol Magazine", "priceUSD": 8.50 }
+      ]
+    }
+  ]
+}

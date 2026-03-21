@@ -1,0 +1,102 @@
+{
+  "muzzles": [
+    {
+      "id": 1,
+      "name": "Compensator AR/DMR",
+      "type": "compensator",
+      "recoilVertical": 25,
+      "recoilHorizontal": 15,
+      "soundReduction": 0,
+      "weight": 2,
+      "image": "https://pubg.wiki.gg/images/Compensator_AR_DMR.png",
+      "prices": [
+        { "name": "PTS AR/DMR Compensator Airsoft", "priceUSD": 14.90 },
+        { "name": "Metal Tactical Compensator AR", "priceUSD": 19.90 }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Compensator SMG",
+      "type": "compensator",
+      "recoilVertical": 20,
+      "recoilHorizontal": 10,
+      "soundReduction": 0,
+      "weight": 1,
+      "image": "https://pubg.wiki.gg/images/Compensator_SMG.png",
+      "prices": [
+        { "name": "SMG Compensator Airsoft", "priceUSD": 12.90 },
+        { "name": "PTS SMG Compensator", "priceUSD": 13.50 }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Flash Hider AR/DMR",
+      "type": "flash_hider",
+      "recoilVertical": 15,
+      "recoilHorizontal": 5,
+      "soundReduction": 0,
+      "weight": 1,
+      "image": "https://pubg.wiki.gg/images/Flash_Hider_AR_DMR.png",
+      "prices": [
+        { "name": "AR/DMR Flash Hider Airsoft", "priceUSD": 10.90 },
+        { "name": "Metal Tactical Flash Hider AR", "priceUSD": 14.50 }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Flash Hider SMG",
+      "type": "flash_hider",
+      "recoilVertical": 12,
+      "recoilHorizontal": 4,
+      "soundReduction": 0,
+      "weight": 1,
+      "image": "https://pubg.wiki.gg/images/Flash_Hider_SMG.png",
+      "prices": [
+        { "name": "SMG Flash Hider Airsoft", "priceUSD": 9.90 },
+        { "name": "PTS SMG Flash Hider", "priceUSD": 12.50 }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Suppressor AR/DMR",
+      "type": "suppressor",
+      "recoilVertical": 5,
+      "recoilHorizontal": 2,
+      "soundReduction": 30,
+      "weight": 2,
+      "image": "https://pubg.wiki.gg/images/Suppressor_AR_DMR.png",
+      "prices": [
+        { "name": "AR/DMR Suppressor Airsoft", "priceUSD": 19.90 },
+        { "name": "Metal Tactical Suppressor AR", "priceUSD": 24.50 }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Suppressor SMG",
+      "type": "suppressor",
+      "recoilVertical": 5,
+      "recoilHorizontal": 2,
+      "soundReduction": 25,
+      "weight": 1,
+      "image": "https://pubg.wiki.gg/images/Suppressor_SMG.png",
+      "prices": [
+        { "name": "SMG Suppressor Airsoft", "priceUSD": 17.90 },
+        { "name": "PTS SMG Suppressor", "priceUSD": 19.50 }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Suppressor Pistol",
+      "type": "suppressor",
+      "recoilVertical": 2,
+      "recoilHorizontal": 1,
+      "soundReduction": 25,
+      "weight": 1,
+      "image": "https://pubg.wiki.gg/images/Suppressor_Pistol.png",
+      "prices": [
+        { "name": "Pistol Suppressor Airsoft", "priceUSD": 12.90 },
+        { "name": "PTS Pistol Suppressor", "priceUSD": 14.50 }
+      ]
+    }
+  ]
+}
