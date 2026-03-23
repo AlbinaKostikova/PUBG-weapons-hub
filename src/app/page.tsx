@@ -21,21 +21,25 @@ export default function Home() {
             Подготовься к королевской битве
           </p>
 
-          <div className="flex flex-wrap justify-center gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-15 max-w-4xl mx-auto">
             {[
-              { title: "Собрать свой набор", link: "/build" },
-              { title: "Битва оружий", link: "/battle" },
-              { title: "Вероятность найти оружие", link: "/possibility" },
-              { title: "Реальные цены", link: "/prices" },
+              { title: "Собрать набор", link: "/build", img: '/img/sborka.jpg' },
+              { title: "Битва оружий", link: "/battle", img: '/img/compare.jpg'},
+              { title: "Карта оружий", link: "/possibility", img: '/img/map.jpg' },
+              { title: "Реальные цены", link: "/prices", img: '/img/prices.jpg' },
             ].map((btn, idx) => (
-              <a
-                key={idx}
-                href={btn.link}
-                className="pubg-hero-action relative flex h-20 w-60 items-center justify-center p-3 text-center text-xs md:h-40 md:w-40 md:text-sm"
-              >
-                {btn.title}
-                <span className="absolute inset-0 border-4 border-yellow-400 animate-ping"></span>
-              </a>
+              <div key={idx} className="relative">
+                <a
+                  href={btn.link}
+                  className="pubg-hero-action relative flex flex-col w-full h-30 items-center text-center text-xs md:h-40 md:text-sm z-10"
+                >
+                  <img className="h-30 mb-2" alt={btn.title} src={btn.img} />
+                  {btn.title}
+                </a>
+                <div className="absolute -inset-1.5 rounded-lg bg-yellow-400 via-orange-500 to-transparent animate-ping-slow opacity-70 blur-md z-0"></div>
+                <div className="absolute -inset-0.75 rounded-lg bg-yellow-500 via-orange-400 to-transparent animate-ping-slow opacity-50 blur-sm z-0"></div>
+                <div className="absolute -inset-px rounded-lg  bg-yellow-300 via-orange-300 to-transparent animate-ping-slow opacity-30 blur-[2px] z-0"></div>
+              </div>
             ))}
           </div>
         </div>
