@@ -8,10 +8,11 @@
       "recoilHorizontal": 10,
       "adsSpeed": 0,
       "weight": 2,
+      "attachableTo": ["AR", "SMG"],
       "image": "https://pubg.wiki.gg/images/Tactical_Stock.png",
       "prices": [
-        { "name": "Magpul MOE Tactical Stock", "priceUSD": 89.90 },
-        { "name": "PTS EPF2 Tactical Stock", "priceUSD": 79.90 }
+        { "name": "Magpul MOE Tactical Stock", "priceUSD": 89.9 },
+        { "name": "PTS EPF2 Tactical Stock", "priceUSD": 79.9 }
       ]
     },
     {
@@ -22,10 +23,11 @@
       "recoilHorizontal": 5,
       "adsSpeed": 0,
       "weight": 1,
+      "attachableTo": ["DMR", "Sniper"],
       "image": "https://pubg.wiki.gg/images/Cheek_Pad.png",
       "prices": [
-        { "name": "Magpul Cheek Riser Pad", "priceUSD": 24.90 },
-        { "name": "Tactical Airsoft Cheek Pad", "priceUSD": 19.90 }
+        { "name": "Magpul Cheek Riser Pad", "priceUSD": 24.9 },
+        { "name": "Tactical Airsoft Cheek Pad", "priceUSD": 19.9 }
       ]
     }
   ]

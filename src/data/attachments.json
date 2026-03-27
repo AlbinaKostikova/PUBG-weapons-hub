@@ -7,10 +7,9 @@
       "accuracyBonus": 5,
       "recoilControl": 2,
       "weight": 1,
+      "attachableTo": ["AR", "SMG", "DMR", "Sniper", "LMG"],
       "image": "https://pubg.wiki.gg/images/Red_Dot_Sight.png",
-      "prices": [
-        { "name": "Red Dot Sight Airsoft / Tactical", "priceUSD": 49.90 }
-      ]
+      "prices": [{ "name": "Red Dot Sight Airsoft / Tactical", "priceUSD": 49.9 }]
     },
     {
       "id": 2,
@@ -19,10 +18,9 @@
       "accuracyBonus": 6,
       "recoilControl": 2,
       "weight": 1,
+      "attachableTo": ["AR", "SMG", "DMR", "Sniper", "LMG"],
       "image": "https://pubg.wiki.gg/images/Holographic_Sight.png",
-      "prices": [
-        { "name": "Holographic Sight Replica", "priceUSD": 79.90 }
-      ]
+      "prices": [{ "name": "Holographic Sight Replica", "priceUSD": 79.9 }]
     },
     {
       "id": 3,
@@ -31,10 +29,9 @@
       "accuracyBonus": 10,
       "recoilControl": 3,
       "weight": 2,
+      "attachableTo": ["AR", "SMG", "DMR", "Sniper", "LMG"],
       "image": "https://pubg.wiki.gg/images/2x_Scope.png",
-      "prices": [
-        { "name": "2x Tactical Scope Airsoft", "priceUSD": 69.90 }
-      ]
+      "prices": [{ "name": "2x Tactical Scope Airsoft", "priceUSD": 69.9 }]
     },
     {
       "id": 4,
@@ -43,10 +40,9 @@
       "accuracyBonus": 14,
       "recoilControl": 4,
       "weight": 2,
+      "attachableTo": ["AR", "SMG", "DMR", "Sniper", "LMG"],
       "image": "https://pubg.wiki.gg/images/3x_Scope.png",
-      "prices": [
-        { "name": "3x Magnification Scope Replica", "priceUSD": 89.90 }
-      ]
+      "prices": [{ "name": "3x Magnification Scope Replica", "priceUSD": 89.9 }]
     },
     {
       "id": 5,
@@ -55,10 +51,9 @@
       "accuracyBonus": 18,
       "recoilControl": 5,
       "weight": 3,
+      "attachableTo": ["AR", "SMG", "DMR", "Sniper", "LMG"],
       "image": "https://pubg.wiki.gg/images/4x_Scope.png",
-      "prices": [
-        { "name": "4x Tactical Scope Airsoft", "priceUSD": 109.90 }
-      ]
+      "prices": [{ "name": "4x Tactical Scope Airsoft", "priceUSD": 109.9 }]
     },
     {
       "id": 6,
@@ -67,10 +62,9 @@
       "accuracyBonus": 24,
       "recoilControl": 6,
       "weight": 3,
+      "attachableTo": ["AR", "SMG", "DMR", "Sniper", "LMG"],
       "image": "https://pubg.wiki.gg/images/6x_Scope.png",
-      "prices": [
-        { "name": "6x Magnification Scope Replica", "priceUSD": 129.90 }
-      ]
+      "prices": [{ "name": "6x Magnification Scope Replica", "priceUSD": 129.9 }]
     },
     {
       "id": 7,
@@ -79,10 +73,9 @@
       "accuracyBonus": 30,
       "recoilControl": 7,
       "weight": 4,
+      "attachableTo": ["AR", "SMG", "DMR", "Sniper", "LMG"],
       "image": "https://pubg.wiki.gg/images/8x_Scope.png",
-      "prices": [
-        { "name": "8x Tactical Scope Airsoft", "priceUSD": 149.90 }
-      ]
+      "prices": [{ "name": "8x Tactical Scope Airsoft", "priceUSD": 149.9 }]
     },
     {
       "id": 8,
@@ -91,10 +84,9 @@
       "accuracyBonus": 40,
       "recoilControl": 10,
       "weight": 5,
+      "attachableTo": ["AR", "SMG", "DMR", "Sniper", "LMG"],
       "image": "https://pubg.wiki.gg/images/15x_Scope.png",
-      "prices": [
-        { "name": "15x Sniper Scope Replica", "priceUSD": 249.90 }
-      ]
+      "prices": [{ "name": "15x Sniper Scope Replica", "priceUSD": 249.9 }]
     }
   ]
 }

@@ -1,12 +1,14 @@
+import { Link } from "lucide-react";
+
 export default function Header() {
   return (
     <header className="relative flex flex-col items-center justify-center min-h-125 text-center 
                        bg-[#111111] bg-[url('/img/main-bg.jpg')] bg-cover bg-top">
       <div className="absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-black/80 to-transparent pointer-events-none"></div>
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-lg mb-6 z-10 absolute top-5">
+      <a href='/' className="z-20 text-4xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-lg mb-6 absolute top-5">
         PUBG Weapon Hub
-      </h1>
-      <div className="flex flex-wrap gap-100 justify-center z-10 absolute top-25">
+      </a>
+      <div className="absolute top-25 z-10 flex w-full items-start justify-between px-6 md:px-14 lg:px-24">
         <div className="flex gap-4">
           {[{ title: 'Собрать набор', link: '/build' },
             { title: 'Битва оружий', link: '/battle' }
@@ -21,7 +23,7 @@ export default function Header() {
           ))}
         </div>
 
-        <div className="flex gap-4 mt-4 md:mt-0">
+        <div className="flex gap-4">
           {[{ title: 'Оружие на карте', link: '/possibility' },
             { title: 'Реальные цены', link: '/prices' }
           ].map((btn, idx) => (

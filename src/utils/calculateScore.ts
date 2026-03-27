@@ -9,10 +9,24 @@ export interface WeaponSetup {
   attachment?: Attachment;
 }
 
-export function calculateScore(setup: WeaponSetup) {
+export interface SetupStats {
+  damage: number;
+  recoilVertical: number;
+  recoilHorizontal: number;
+  accuracy: number;
+  adsSpeed: number;
+  stability: number;
+  capacityBonus: number;
+  reloadSpeedBonus: number;
+  soundReduction: number;
+  weight: number;
+  score: number;
+}
+
+export function calculateSetupStats(setup: WeaponSetup): SetupStats {
   const { weapon, stock, muzzle, magazine, grip, attachment } = setup;
 
-  let damage = weapon.damage ?? 0;
+  const damage = weapon.damage ?? 0;
   let recoilVertical = 0;
   let recoilHorizontal = 0;
   let accuracy = 0;
@@ -58,7 +72,7 @@ export function calculateScore(setup: WeaponSetup) {
   }
 
   const score =
-    damage * 2 + 
+    damage * 2 +
     accuracy * 1.5 +
     stability * 1.2 +
     capacityBonus * 0.8 -
@@ -66,8 +80,23 @@ export function calculateScore(setup: WeaponSetup) {
     weight * 0.5 +
     reloadSpeedBonus * 1.0 +
     adsSpeed * 1.0 +
-    soundReduction * 0.7
-    ;
+    soundReduction * 0.7;
 
-  return Math.round(score);
+  return {
+    damage,
+    recoilVertical,
+    recoilHorizontal,
+    accuracy,
+    adsSpeed,
+    stability,
+    capacityBonus,
+    reloadSpeedBonus,
+    soundReduction,
+    weight,
+    score: Math.round(score),
+  };
+}
+
+export function calculateScore(setup: WeaponSetup) {
+  return calculateSetupStats(setup).score;
 }
