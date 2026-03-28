@@ -8,7 +8,7 @@
       "stability": 10,
       "adsSpeed": -2,
       "attachableTo": ["AR", "SMG", "DMR", "LMG"],
-      "image": "https://pubg.wiki.gg/images/Vertical_Foregrip.png",
+      "image": "/img/foregrip_Vertical.png",
       "prices": [
         { "name": "PTS EPF2‑S Vertical Foregrip", "priceUSD": 24.9 },
         { "name": "Generic Tactical Vertical Grip", "priceUSD": 12.99 }
@@ -22,7 +22,7 @@
       "stability": 8,
       "adsSpeed": 10,
       "attachableTo": ["AR", "SMG", "DMR", "LMG"],
-      "image": "https://pubg.wiki.gg/images/Angled_Foregrip.png",
+      "image": "/img/foregrip_Angled.png",
       "prices": [
         { "name": "MP AFG‑2 Angled Foregrip", "priceUSD": 7.9 },
         { "name": "Magpul M‑LOK AFG", "priceUSD": 32.9 },
@@ -37,7 +37,7 @@
       "stability": 12,
       "adsSpeed": -5,
       "attachableTo": ["AR", "SMG", "DMR", "LMG"],
-      "image": "https://pubg.wiki.gg/images/Half_Grip.png",
+      "image": "/img/HalfGrip.png",
       "prices": [{ "name": "Ergonomic Pointing Foregrip", "priceUSD": 17.9 }]
     },
     {
@@ -48,7 +48,7 @@
       "stability": 6,
       "adsSpeed": 15,
       "attachableTo": ["AR", "SMG", "DMR", "LMG"],
-      "image": "https://pubg.wiki.gg/images/Thumb_Grip.png",
+      "image": "/img/ThumbGrip.png",
       "prices": [{ "name": "FMA Foldable Grip", "priceUSD": 21.9 }]
     },
     {
@@ -59,7 +59,7 @@
       "stability": 5,
       "adsSpeed": 5,
       "attachableTo": ["AR", "SMG", "DMR", "LMG"],
-      "image": "https://pubg.wiki.gg/images/Lightweight_Grip.png",
+      "image": "/img/LightGrip.png",
       "prices": [{ "name": "Lightweight Tactical Grip", "priceUSD": 14.9 }]
     },
     {
@@ -70,8 +70,19 @@
       "stability": 3,
       "adsSpeed": 8,
       "attachableTo": ["AR", "SMG", "Pistol"],
-      "image": "https://pubg.wiki.gg/images/Laser_Sight.png",
+      "image": "/img/LaserPointer.png",
       "prices": [{ "name": "Airsoft Laser Sight", "priceUSD": 19.9 }]
+    },
+    {
+      "id": 7,
+      "name": "Ergonomic Grip",
+      "recoilVertical": 8,
+      "recoilHorizontal": 8,
+      "stability": 14,
+      "adsSpeed": 4,
+      "attachableTo": ["AR", "SMG", "DMR", "LMG"],
+      "image": "/img/Ergonomic_Grip.png",
+      "prices": [{ "name": "Ergonomic Grip Replica", "priceUSD": 18.9 }]
     }
   ]
 }

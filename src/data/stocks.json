@@ -9,7 +9,7 @@
       "adsSpeed": 0,
       "weight": 2,
       "attachableTo": ["AR", "SMG"],
-      "image": "https://pubg.wiki.gg/images/Tactical_Stock.png",
+      "image": "/img/tacticalStockRiffles.png",
       "prices": [
         { "name": "Magpul MOE Tactical Stock", "priceUSD": 89.9 },
         { "name": "PTS EPF2 Tactical Stock", "priceUSD": 79.9 }
@@ -24,11 +24,59 @@
       "adsSpeed": 0,
       "weight": 1,
       "attachableTo": ["DMR", "Sniper"],
-      "image": "https://pubg.wiki.gg/images/Cheek_Pad.png",
+      "image": "/img/cheeekPad_Sniper.png",
       "prices": [
         { "name": "Magpul Cheek Riser Pad", "priceUSD": 24.9 },
         { "name": "Tactical Airsoft Cheek Pad", "priceUSD": 19.9 }
       ]
+    },
+    {
+      "id": 3,
+      "name": "Tactical Stock Micro UZI",
+      "type": "tactical_uzi",
+      "recoilVertical": 12,
+      "recoilHorizontal": 8,
+      "adsSpeed": 3,
+      "weight": 1,
+      "attachableTo": ["SMG"],
+      "image": "/img/stock_QT_UZI.png",
+      "prices": [{ "name": "Micro UZI Tactical Stock Replica", "priceUSD": 16.9 }]
+    },
+    {
+      "id": 4,
+      "name": "Bullet Loops (Shotgun)",
+      "type": "bullet_loops_shotgun",
+      "recoilVertical": 0,
+      "recoilHorizontal": 0,
+      "adsSpeed": 5,
+      "weight": 1,
+      "attachableTo": ["Shotgun"],
+      "image": "/img/bulletloop_Shotgun.png",
+      "prices": [{ "name": "Shotgun Bullet Loops", "priceUSD": 9.9 }]
+    },
+    {
+      "id": 5,
+      "name": "Quiver (Crossbow)",
+      "type": "quiver",
+      "recoilVertical": 0,
+      "recoilHorizontal": 0,
+      "adsSpeed": 8,
+      "weight": 1,
+      "attachableTo": ["Crossbow"],
+      "image": "/img/Crossbow_Q.png",
+      "prices": [{ "name": "Crossbow Quiver", "priceUSD": 12.9 }]
+    },
+    {
+      "id": 6,
+      "name": "Full-Auto Mod Kit",
+      "type": "full_auto_mod",
+      "recoilVertical": -5,
+      "recoilHorizontal": -3,
+      "adsSpeed": 0,
+      "weight": 1,
+      "attachableTo": ["AR"],
+      "image": "/img/Full_Auto_Mod.png",
+      "prices": [{ "name": "Full-Auto Mod Kit", "priceUSD": 22.9 }]
     }
   ]
 }

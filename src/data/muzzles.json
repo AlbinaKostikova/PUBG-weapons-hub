@@ -9,7 +9,7 @@
       "soundReduction": 0,
       "weight": 2,
       "attachableTo": ["AR", "DMR", "LMG"],
-      "image": "https://pubg.wiki.gg/images/Compensator_AR_DMR.png",
+      "image": "/img/AR_Compensator.png",
       "prices": [
         { "name": "PTS AR/DMR Compensator Airsoft", "priceUSD": 14.9 },
         { "name": "Metal Tactical Compensator AR", "priceUSD": 19.9 }
@@ -24,7 +24,7 @@
       "soundReduction": 0,
       "weight": 1,
       "attachableTo": ["SMG"],
-      "image": "https://pubg.wiki.gg/images/Compensator_SMG.png",
+      "image": "/img/SMGCompensator.png",
       "prices": [
         { "name": "SMG Compensator Airsoft", "priceUSD": 12.9 },
         { "name": "PTS SMG Compensator", "priceUSD": 13.5 }
@@ -39,7 +39,7 @@
       "soundReduction": 0,
       "weight": 1,
       "attachableTo": ["AR", "DMR", "LMG"],
-      "image": "https://pubg.wiki.gg/images/Flash_Hider_AR_DMR.png",
+      "image": "/img/ARFlashHider.png",
       "prices": [
         { "name": "AR/DMR Flash Hider Airsoft", "priceUSD": 10.9 },
         { "name": "Metal Tactical Flash Hider AR", "priceUSD": 14.5 }
@@ -54,7 +54,7 @@
       "soundReduction": 0,
       "weight": 1,
       "attachableTo": ["SMG"],
-      "image": "https://pubg.wiki.gg/images/Flash_Hider_SMG.png",
+      "image": "/img/SMGFlashHider.png",
       "prices": [
         { "name": "SMG Flash Hider Airsoft", "priceUSD": 9.9 },
         { "name": "PTS SMG Flash Hider", "priceUSD": 12.5 }
@@ -69,7 +69,7 @@
       "soundReduction": 30,
       "weight": 2,
       "attachableTo": ["AR", "DMR", "LMG"],
-      "image": "https://pubg.wiki.gg/images/Suppressor_AR_DMR.png",
+      "image": "/img/AR_Suppressor.png",
       "prices": [
         { "name": "AR/DMR Suppressor Airsoft", "priceUSD": 19.9 },
         { "name": "Metal Tactical Suppressor AR", "priceUSD": 24.5 }
@@ -84,7 +84,7 @@
       "soundReduction": 25,
       "weight": 1,
       "attachableTo": ["SMG"],
-      "image": "https://pubg.wiki.gg/images/Suppressor_SMG.png",
+      "image": "/img/Suppressor.png",
       "prices": [
         { "name": "SMG Suppressor Airsoft", "priceUSD": 17.9 },
         { "name": "PTS SMG Suppressor", "priceUSD": 19.5 }
@@ -99,11 +99,47 @@
       "soundReduction": 25,
       "weight": 1,
       "attachableTo": ["Pistol"],
-      "image": "https://pubg.wiki.gg/images/Suppressor_Pistol.png",
+      "image": "/img/Suppressor.png",
       "prices": [
         { "name": "Pistol Suppressor Airsoft", "priceUSD": 12.9 },
         { "name": "PTS Pistol Suppressor", "priceUSD": 14.5 }
       ]
+    },
+    {
+      "id": 8,
+      "name": "Compensator Sniper",
+      "type": "compensator",
+      "recoilVertical": 30,
+      "recoilHorizontal": 18,
+      "soundReduction": 0,
+      "weight": 2,
+      "attachableTo": ["Sniper", "DMR"],
+      "image": "/img/Sniper_Compensator.png",
+      "prices": [{ "name": "Sniper Compensator Airsoft", "priceUSD": 18.9 }]
+    },
+    {
+      "id": 9,
+      "name": "Flash Hider Sniper",
+      "type": "flash_hider",
+      "recoilVertical": 20,
+      "recoilHorizontal": 8,
+      "soundReduction": 0,
+      "weight": 2,
+      "attachableTo": ["Sniper", "DMR"],
+      "image": "/img/Sniper_FlashHider.png",
+      "prices": [{ "name": "Sniper Flash Hider Airsoft", "priceUSD": 16.9 }]
+    },
+    {
+      "id": 10,
+      "name": "Suppressor Sniper",
+      "type": "suppressor",
+      "recoilVertical": 6,
+      "recoilHorizontal": 3,
+      "soundReduction": 35,
+      "weight": 2,
+      "attachableTo": ["Sniper", "DMR"],
+      "image": "/img/Sniper_Suppressor.png",
+      "prices": [{ "name": "Sniper Suppressor Airsoft", "priceUSD": 24.9 }]
     }
   ]
 }
