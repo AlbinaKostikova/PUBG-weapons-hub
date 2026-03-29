@@ -85,7 +85,7 @@
       "recoilControl": 10,
       "weight": 5,
       "attachableTo": ["AR", "SMG", "DMR", "Sniper", "LMG"],
-      "image": "https://pubg.wiki.gg/images/15x_Scope.png",
+      "image": "/img/scoop_15X.png",
       "prices": [{ "name": "15x Sniper Scope Replica", "priceUSD": 249.9 }]
     },
     {

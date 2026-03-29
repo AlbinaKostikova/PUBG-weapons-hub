@@ -193,7 +193,7 @@ export default function BuildPage() {
                           disabled={!isAttachable}
                           title={isAttachable ? item.name : 'Не подходит для выбранного оружия'}
                           className={`flex w-full items-center gap-2 text-left ${isAttachable ? '' : 'cursor-not-allowed'}`}>
-                          <img src={item.image} alt={item.name} className="h-8 w-8 rounded object-contain" />
+                          <img src={item.image} alt={item.name} className="h-8 w-8 rounded object-contain scale-120 translate-y-1" />
                           <span className="text-xs leading-tight">{item.name}</span>
                         </button>
                       </li>
@@ -213,7 +213,7 @@ export default function BuildPage() {
                   <img
                     src={selectedWeapon.image}
                     alt={selectedWeapon.name}
-                    className="max-h-60 w-full max-w-sm object-contain"
+                    className="max-h-60 w-full max-w-sm object-contain scale-120"
                   />
                   <div className="absolute left-2 top-2 rounded bg-[#0f0f0f]/80 px-2 py-1 text-xs text-[#cfcfcf]">
                     {selectedWeapon.name}
@@ -310,7 +310,7 @@ export default function BuildPage() {
                           disabled={!isAttachable}
                           title={isAttachable ? item.name : 'Не подходит для выбранного оружия'}
                           className={`flex w-full items-center gap-2 text-left ${isAttachable ? '' : 'cursor-not-allowed'}`}>
-                          <img src={item.image} alt={item.name} className="h-8 w-8 rounded object-contain" />
+                          <img src={item.image} alt={item.name} className="h-8 w-8 rounded object-contain scale-120 translate-y-1" />
                           <span className="text-xs leading-tight">{item.name}</span>
                         </button>
                       </li>

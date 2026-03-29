@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import attachmentsData from '../data/attachments.json'
 import gripsData from '../data/grips.json'
@@ -8,18 +8,16 @@ import muzzlesData from '../data/muzzles.json'
 import stocksData from '../data/stocks.json'
 import weaponsData from '../data/weapons.json'
 import WeaponCard from '@/components/WeaponCard'
+import ItemModal, { ModalCategory } from '@/components/ItemModal'
 
 type AttachmentPreview = {
+  id?: number
   name: string
   image: string
+  [key: string]: any
 }
 
-
-
 // Добавить корзину в страницу с ценами и увеличить картинки
-
-
-
 
 export default function Home() {
   const weaponRows = 3
@@ -28,25 +26,32 @@ export default function Home() {
     .sort((a, b) => b.damage - a.damage)
     .slice(0, weaponRows * weaponsPerRow)
 
-  const attachmentSections: { title: string; items: AttachmentPreview[] }[] = [
+  const [modalItem, setModalItem] = useState<{ item: AttachmentPreview; category: ModalCategory } | null>(null)
+
+  const attachmentSections: { title: string; category: ModalCategory; items: AttachmentPreview[] }[] = [
     {
       title: 'Приклады',
+      category: 'stock',
       items: stocksData.stocks,
     },
     {
       title: 'Рукоятки',
+      category: 'grip',
       items: gripsData.grips,
     },
     {
       title: 'Магазины',
+      category: 'magazine',
       items: magazinesData.magazines,
     },
     {
       title: 'Дульные насадки',
+      category: 'muzzle',
       items: muzzlesData.muzzles,
     },
     {
       title: 'Прицелы',
+      category: 'scope',
       items: attachmentsData.scopes,
     },
   ]
@@ -141,21 +146,24 @@ export default function Home() {
 
                 <div className="grid grid-cols-2 gap-7 md:grid-cols-4">
                   {section.items.slice(0, 8).map(item => (
-                    <Link key={item.name} href="/build" className="group relative w-full max-w-60 mx-auto">
+                    <button
+                      key={item.name}
+                      onClick={() => setModalItem({ item, category: section.category })}
+                      className="group relative w-full max-w-60 mx-auto text-left">
                       <div className="absolute -inset-0.5 rounded-2xl bg-linear-to-r from-yellow-500/0 via-yellow-500/40 to-yellow-500/0 blur opacity-0 transition duration-500 group-hover:opacity-100"></div>
                       <div className="relative flex h-full min-h-50 flex-col items-center rounded-2xl border border-[#2a2a2a] bg-[#1a1a1a] px-3 pt-4 pb-5 transition duration-300 group-hover:scale-105 group-hover:border-yellow-400">
                         <div className="relative h-44 w-full overflow-hidden rounded-xl bg-[radial-gradient(circle,rgba(255,230,150,0.18)_0%,rgba(255,255,255,0.08)_40%,rgba(0,0,0,0)_70%)]">
                           <img
                             src={item.image}
                             alt={item.name}
-                            className="h-[112%] w-full -translate-y-2 scale-250 object-contain transition duration-300 group-hover:scale-255"
+                            className="h-full w-full object-contain translate-y-7 transition duration-300"
                           />
                         </div>
                         <h4 className="mt-3 text-center text-sm font-semibold tracking-wide text-white transition group-hover:text-yellow-400">
                           {item.name}
                         </h4>
                       </div>
-                    </Link>
+                    </button>
                   ))}
                 </div>
               </div>
@@ -163,6 +171,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {modalItem && (
+        <ItemModal item={modalItem.item} category={modalItem.category} onClose={() => setModalItem(null)} />
+      )}
     </div>
   )
 }
