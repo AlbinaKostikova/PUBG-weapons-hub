@@ -22,7 +22,31 @@ export default function Prices() {
 
   return (
     <div className="min-h-screen">
-      <section className="pubg-section">
+      <nav className="sticky top-0 mt-8 z-40 border-b border-[#2a2a2a] bg-[#111111]/95 backdrop-blur-sm shadow-[0_2px_20px_rgba(0,0,0,0.6)]">
+        <div className="pubg-container">
+          <ul className="flex items-center justify-center gap-1 overflow-x-auto py-1 scrollbar-none">
+            {[
+              { href: '#weapons', label: 'Оружие' },
+              { href: '#scopes', label: 'Прицелы' },
+              { href: '#grips', label: 'Рукоятки' },
+              { href: '#muzzles', label: 'Дульные насадки' },
+              { href: '#magazines', label: 'Магазины' },
+              { href: '#stocks', label: 'Приклады' },
+            ].map((item, idx, arr) => (
+              <li key={item.href} className="flex items-center shrink-0">
+                <a
+                  href={item.href}
+                  className="group relative flex items-center px-4 py-4 text-sm font-bold uppercase tracking-[0.15em] text-[#888] transition-colors duration-200 hover:text-yellow-400">
+                  <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-yellow-400 transition-all duration-300 group-hover:w-full" />
+                  {item.label}
+                </a>
+                {idx < arr.length - 1 && <span className="h-3 w-px shrink-0 bg-[#333]" />}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav>
+      <section className="pubg-section" id="weapons">
         <div className="pubg-container">
           <h2 className="pubg-title mb-8 text-2xl md:text-3xl">Оружие и цены</h2>
           <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
@@ -39,7 +63,7 @@ export default function Prices() {
         </div>
       </section>
 
-      <section className="pubg-section bg-[#171717]">
+      <section className="pubg-section bg-[#171717]" id="scopes">
         <div className="pubg-container">
           <h2 className="pubg-title mb-8 text-2xl md:text-3xl">Прицелы</h2>
           <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
@@ -59,7 +83,7 @@ export default function Prices() {
         </div>
       </section>
 
-      <section className="pubg-section">
+      <section className="pubg-section" id="grips">
         <div className="pubg-container">
           <h2 className="pubg-title mb-8 text-2xl md:text-3xl">Рукоятки</h2>
           <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
@@ -79,7 +103,7 @@ export default function Prices() {
         </div>
       </section>
 
-      <section className="pubg-section bg-[#171717]">
+      <section className="pubg-section bg-[#171717]" id="muzzles">
         <div className="pubg-container">
           <h2 className="pubg-title mb-8 text-2xl md:text-3xl">Дульные насадки</h2>
           <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
@@ -102,7 +126,7 @@ export default function Prices() {
         </div>
       </section>
 
-      <section className="pubg-section">
+      <section className="pubg-section" id="magazines">
         <div className="pubg-container">
           <h2 className="pubg-title mb-8 text-2xl md:text-3xl">Магазины</h2>
           <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
@@ -122,7 +146,7 @@ export default function Prices() {
         </div>
       </section>
 
-      <section className="pubg-section bg-[#171717]">
+      <section className="pubg-section bg-[#171717]" id="stocks">
         <div className="pubg-container">
           <h2 className="pubg-title mb-8 text-2xl md:text-3xl">Приклады</h2>
           <div className="grid grid-cols-2 gap-5 md:grid-cols-4">

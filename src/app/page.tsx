@@ -17,8 +17,6 @@ type AttachmentPreview = {
   [key: string]: any
 }
 
-// Добавить корзину в страницу с ценами и увеличить картинки
-
 export default function Home() {
   const weaponRows = 3
   const weaponsPerRow = 4

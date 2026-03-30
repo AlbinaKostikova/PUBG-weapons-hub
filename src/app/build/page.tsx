@@ -57,6 +57,9 @@ const rightSections: ItemSection[] = [
       attachableTo: item.attachableTo ?? [],
     })),
   },
+]
+
+const stockSections: ItemSection[] = [
   {
     title: 'Приклады',
     items: stocksData.stocks.map(item => ({
@@ -148,7 +151,7 @@ export default function BuildPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
           <aside className="pubg-card p-4">
             {leftSections.map(section => (
               <div key={section.title} className="mb-6 last:mb-0">
@@ -193,7 +196,11 @@ export default function BuildPage() {
                           disabled={!isAttachable}
                           title={isAttachable ? item.name : 'Не подходит для выбранного оружия'}
                           className={`flex w-full items-center gap-2 text-left ${isAttachable ? '' : 'cursor-not-allowed'}`}>
-                          <img src={item.image} alt={item.name} className="h-8 w-8 rounded object-contain scale-120 translate-y-1" />
+                          <img
+                            src={item.image}
+                            alt={item.name}
+                            className="h-8 w-8 rounded object-contain scale-120 translate-y-1"
+                          />
                           <span className="text-xs leading-tight">{item.name}</span>
                         </button>
                       </li>
@@ -204,17 +211,52 @@ export default function BuildPage() {
             ))}
           </aside>
 
-          <main className="pubg-card flex min-h-140 flex-col p-4">
+          <main className="pubg-card flex min-h-110 flex-col p-4">
             <h3 className="pubg-title mb-3 text-lg">Конструктор</h3>
 
-            <div className="relative flex flex-1 items-center justify-center rounded-md border border-[#444] bg-[#151515] p-4">
+            <div className="relative flex min-h-84 items-center justify-center overflow-hidden rounded-md border border-[#444] bg-[#151515] p-4">
               {selectedWeapon ? (
                 <>
+                  {selectedStock && (
+                    <img
+                      src={selectedStock.image}
+                      alt={selectedStock.name}
+                      className="pointer-events-none absolute right-[5%] top-[65%] z-0 h-20 w-20 -translate-y-1/2 object-contain opacity-90 md:h-24 md:w-24"
+                    />
+                  )}
+                  {selectedMuzzle && (
+                    <img
+                      src={selectedMuzzle.image}
+                      alt={selectedMuzzle.name}
+                      className="pointer-events-none absolute left-[8%] top-[40%] z-20 h-16 w-16 -translate-y-1/2 object-contain md:h-20 md:w-20"
+                    />
+                  )}
                   <img
                     src={selectedWeapon.image}
                     alt={selectedWeapon.name}
-                    className="max-h-60 w-full max-w-sm object-contain scale-120"
+                    className="relative z-10 max-h-44 w-full max-w-xs object-contain md:max-h-52 md:max-w-sm"
                   />
+                  {selectedAttachment && (
+                    <img
+                      src={selectedAttachment.image}
+                      alt={selectedAttachment.name}
+                      className="pointer-events-none absolute left-1/2 top-[30%] z-30 h-16 w-16 -translate-x-[8%] -translate-y-1/2 object-contain md:h-20 md:w-20"
+                    />
+                  )}
+                  {selectedGrip && (
+                    <img
+                      src={selectedGrip.image}
+                      alt={selectedGrip.name}
+                      className="pointer-events-none absolute left-[30%] bottom-[15%] z-20 h-16 w-16 -translate-x-[4%] -translate-y-1/2 object-contain md:h-20 md:w-20"
+                    />
+                  )}
+                  {selectedMagazine && (
+                    <img
+                      src={selectedMagazine.image}
+                      alt={selectedMagazine.name}
+                      className="pointer-events-none absolute left-[47%] top-[70%] z-20 h-16 w-16 -translate-x-1/2 -translate-y-1/2 object-contain md:h-20 md:w-20"
+                    />
+                  )}
                   <div className="absolute left-2 top-2 rounded bg-[#0f0f0f]/80 px-2 py-1 text-xs text-[#cfcfcf]">
                     {selectedWeapon.name}
                   </div>
@@ -224,11 +266,11 @@ export default function BuildPage() {
               )}
             </div>
 
-            <div className="mt-4 rounded-md border border-[#444] bg-[#1a1a1a] p-3">
-              <h4 className="pubg-title mb-2 text-sm">Итог сборки</h4>
+            <div className="mt-4 rounded-lg border-2 border-yellow-400/10 bg-[#1a1a1a] p-4 shadow-[0_0_20px_rgba(245,158,11,0.25)]">
+              <h4 className="pubg-title mb-3 text-base font-bold text-yellow-400">Итог сборки</h4>
 
               {setupStats ? (
-                <div className="grid grid-cols-2 gap-2 text-xs text-[#d9d9d9] sm:grid-cols-3">
+                <div className="grid grid-cols-2 gap-2 text-sm text-[#d9d9d9] sm:grid-cols-3">
                   <div className="rounded bg-[#121212] px-2 py-1">Урон: {setupStats.damage}</div>
                   <div className="rounded bg-[#121212] px-2 py-1">Отдача V: {setupStats.recoilVertical}</div>
                   <div className="rounded bg-[#121212] px-2 py-1">Отдача H: {setupStats.recoilHorizontal}</div>
@@ -245,13 +287,61 @@ export default function BuildPage() {
                   </div>
                   <div className="rounded bg-[#121212] px-2 py-1">Тихость: +{setupStats.soundReduction}</div>
                   <div className="rounded bg-[#121212] px-2 py-1">Вес: {setupStats.weight}</div>
-                  <div className="rounded border border-[#5a4712] bg-[#221b0d] px-2 py-1 text-[#ffd24a]">
+                  <div className="rounded col-span-2 h-15 text-base flex items-center justify-center text-center border border-[#5a4712] bg-[#221b0d] px-2 py-1 text-[#ffd24a]">
                     Общий рейтинг: {setupStats.score}
                   </div>
                 </div>
               ) : (
                 <p className="text-xs text-[#b3b3b3]">Параметры появятся после выбора оружия.</p>
               )}
+            </div>
+
+            <div className="mt-4 rounded-md border border-[#444] bg-[#1a1a1a] p-3">
+              {stockSections.map(section => (
+                <div key={section.title}>
+                  <h4 className="pubg-title mb-3 text-sm">{section.title}</h4>
+                  <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 text-sm text-[#cfcfcf]">
+                    {section.items.map(item => {
+                      const isSelected = selectedStock?.name === item.name
+                      const isAttachable = isItemAttachable(item)
+
+                      return (
+                        <li
+                          key={item.name}
+                          className={`rounded-md border px-2 py-2 ${
+                            isSelected
+                              ? 'border-[#f0b90b] bg-[#2a2412]'
+                              : isAttachable
+                                ? 'border-[#444] bg-[#1f1f1f]'
+                                : 'border-[#333] bg-[#191919] opacity-50'
+                          }`}>
+                          <button
+                            type="button"
+                            onClick={() => {
+                              if (!isAttachable) {
+                                return
+                              }
+                              const stock = stocksData.stocks.find(stockItem => stockItem.name === item.name)
+                              setSelectedStock(
+                                selectedStock?.name === item.name ? undefined : (stock as Stock | undefined),
+                              )
+                            }}
+                            disabled={!isAttachable}
+                            title={isAttachable ? item.name : 'Не подходит для выбранного оружия'}
+                            className={`flex w-full items-center gap-2 text-left ${isAttachable ? '' : 'cursor-not-allowed'}`}>
+                            <img
+                              src={item.image}
+                              alt={item.name}
+                              className="h-8 w-8 rounded object-contain scale-120 translate-y-1"
+                            />
+                            <span className="text-xs leading-tight">{item.name}</span>
+                          </button>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </div>
+              ))}
             </div>
           </main>
 
@@ -267,8 +357,6 @@ export default function BuildPage() {
                       isSelected = selectedMagazine?.name === item.name
                     } else if (section.title === 'Рукоятки') {
                       isSelected = selectedGrip?.name === item.name
-                    } else {
-                      isSelected = selectedStock?.name === item.name
                     }
 
                     const isAttachable = isItemAttachable(item)
@@ -300,17 +388,16 @@ export default function BuildPage() {
                             } else if (section.title === 'Рукоятки') {
                               const grip = gripsData.grips.find(gripItem => gripItem.name === item.name)
                               setSelectedGrip(selectedGrip?.name === item.name ? undefined : (grip as Grip | undefined))
-                            } else {
-                              const stock = stocksData.stocks.find(stockItem => stockItem.name === item.name)
-                              setSelectedStock(
-                                selectedStock?.name === item.name ? undefined : (stock as Stock | undefined),
-                              )
                             }
                           }}
                           disabled={!isAttachable}
                           title={isAttachable ? item.name : 'Не подходит для выбранного оружия'}
                           className={`flex w-full items-center gap-2 text-left ${isAttachable ? '' : 'cursor-not-allowed'}`}>
-                          <img src={item.image} alt={item.name} className="h-8 w-8 rounded object-contain scale-120 translate-y-1" />
+                          <img
+                            src={item.image}
+                            alt={item.name}
+                            className="h-8 w-8 rounded object-contain scale-120 translate-y-1"
+                          />
                           <span className="text-xs leading-tight">{item.name}</span>
                         </button>
                       </li>
